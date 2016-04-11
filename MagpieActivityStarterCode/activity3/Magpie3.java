@@ -45,6 +45,35 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+
+		else if (statement.indexOf("you") >= 0
+                 || statement.indexOf("your") >= 0) {
+            response = "Let's talk less about me, more about you.";
+        }
+        else if (statement.indexOf("suck") >= 0
+                 || statement.indexOf("hate") >= 0
+                 || statement.indexOf("stupid") >= 0) {
+            response = "That's mean :(";
+        }
+        else if (statement.trim().equals("")) {
+            response = "...Excuse me?";
+        }
+        else if (statement.indexOf("restaurant") >= 0) {
+            response = "I found 12 restaurants in your area.";
+        }
+        else if (statement.indexOf("yes") >= 0) {
+            response = "That's what I thought.";
+        }
+        else if (statement.indexOf("Sebastian") >= 0
+        	|| statement.indexOf("Matthew") >= 0) {
+            response = "Oh, I heard he's the best.";
+        }
+        else if (statement.indexOf("love") >= 0) {
+            response = "The feeling is not mutual.";
+        }
+        else if (statement.indexOf("know") >= 0) {
+            response = "Good to know.";
+        }        
 		else
 		{
 			response = getRandomResponse();
